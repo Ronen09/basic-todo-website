@@ -1,0 +1,27 @@
+body {
+  margin-top: 5em;
+  margin-left: 20em;
+}
+
+.todo {
+  cursor: pointer;
+  --thickness: .05em;
+  --strike: 0;
+  width: 10em;
+  background: linear-gradient(90deg, transparent, currentColor 0) no-repeat 
+              right center / calc(var(--strike) * 100%) var(--thickness);
+  font:25px Arial;
+  transition: background-size .4s ease;
+  padding: 0.2em;
+}
+.strike {
+  padding: 0.2em;
+  cursor: pointer;
+  font:25px Arial;
+  text-decoration: line-through;
+  width: 10em;
+}
+.todo:hover{
+  --strike: 1;
+  background-position-x:left;
+}
